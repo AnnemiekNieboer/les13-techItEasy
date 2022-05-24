@@ -27,7 +27,7 @@ console.log(tvTypes);
 // stock === o)
 //Stap 3 export currentSoldOut
 
-const soldOut = inventory.filter((tv) => {
+export const soldOut = inventory.filter((tv) => {
     let currentStock = tv.originalStock - tv.sold;
     if (currentStock === 0) {
         return tv;
@@ -46,7 +46,7 @@ console.log(soldOut);
 //Stap 2: Filter de objecten uit de inventory op options.ambilight true
 //Stap 3: Return de items
 
-const ambiLightTv = inventory.filter((tv) => {
+export const ambiLightTv = inventory.filter((tv) => {
     if (tv.options.ambiLight === true) {
         return tv;
     }
@@ -61,7 +61,7 @@ console.log(ambiLightTv);
 //Stap 1: Maak een variabele aan om de nieuwe lijst in op te slaan (=niet noodzakelijk, maar netjes)
 //Stap 2: Voeg sort toe aan de inventory lijst, met een a en b parameter in de callback functie
 
-const sortByPrice = inventory.sort((a , b)=> {
+export const sortByPrice = inventory.sort((a , b)=> {
     return a.price - b.price;
 })
 
