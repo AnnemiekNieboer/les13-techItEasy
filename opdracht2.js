@@ -13,22 +13,30 @@ import {inventory} from "./inventory.js";
 //Stap 3: Bereken de sum van de array en plaats deze in een variabele
 //Stap 4: Return het aantal verkochte tv's
 
-export const soldTvs = inventory.map((tv) => {
-    return tv.sold;
-
-});
+// export const soldTvs = inventory.map((tv) => {
+//     return tv.sold;
+//
+// });
+//
+// export const totalSumOfSoldTvs = () => {
+//     let sum = 0;
+//     for (let i = 0; i < soldTvs.length; i++) {
+//         sum += soldTvs[i];
+//     }
+//     return sum;
+// }
+//
+// console.log(totalSumOfSoldTvs());
 
 export const totalSumOfSoldTvs = () => {
-    let sum = 0;
-    for (let i = 0; i < soldTvs.length; i++) {
-        sum += soldTvs[i];
-    }
-    return sum;
+    let totalSoldTvs = null;
+    inventory.map((tv) => {
+        totalSoldTvs += tv.sold;
+    })
+    return totalSoldTvs;
 }
-
-console.log(totalSumOfSoldTvs());
-
-
+console.log("Total sold")
+console.log(totalSumOfSoldTvs())
 
 // * **Opdracht 2b:** Zorg ervoor dat dit aantal _in het groen_ wordt
 // weergegeven op de pagina.
@@ -39,47 +47,54 @@ export const createSoldTvs = () => {
     soldTvs.style.color = "green";
 };
 
-createSoldTvs();
-
 // * **Opdracht 2c:** Hoeveel tv's heeft Tech It Easy ingekocht? Schrijf
 // een script dat dit berekent. Log de uitkomst in de console.
 
-const boughtTvs = inventory.map ((tv) => {
-    return tv.originalStock;
-})
+// Versie met twee anonieme functions
+// const boughtTvs = inventory.map ((tv) => {
+//     return tv.originalStock;
+// })
+//
+// const totalSumOfPurchasedTvs = () => {
+//     let sum = 0;
+//     for (let i = 0; i < boughtTvs.length ; i++) {
+//         sum += boughtTvs[i];
+//     }
+//     return sum;
+// }
+// console.log(totalSumOfPurchasedTvs());
 
-const totalSumOfPurchasedTvs = () => {
-    let sum = 0;
-    for (let i = 0; i < boughtTvs.length ; i++) {
-        sum += boughtTvs[i];
-    }
-    return sum;
+//Versie in 1 anonieme functie zonder for loop
+export const totalSumOfPurchasedTvs = () => {
+    let totalTv = null;
+    inventory.map ((tv) => {
+        totalTv += tv.originalStock;
+    })
+    return totalTv;
 }
 
+console.log("Total tv's purchased")
 console.log(totalSumOfPurchasedTvs());
+
 
 // * **Opdracht 2d:** Zorg ervoor dat dit aantal _in het blauw_ wordt
 // weergegeven op de pagina.
 
-const createPurchasedTvs = () => {
+export const createPurchasedTvs = () => {
     const purchasedTVs = document.getElementById("tvs-purchased");
     purchasedTVs.innerText = `${totalSumOfPurchasedTvs()} tv's are purchased`;
     purchasedTVs.style.color = "blue";
 }
 
-createPurchasedTvs();
-
 // * **Opdracht 2e:** Geef _in het rood_ weer hoeveel tv's er nog verkocht
 // moeten worden.
 
-const totalAmountOfStock = () => {
+export const totalAmountOfStock = () => {
   return totalSumOfPurchasedTvs() - totalSumOfSoldTvs();
 };
 
-const createAmountOfStock = () => {
+export const createAmountOfStock = () => {
     let currentStock = document.getElementById("tvs-in-stock");
     currentStock.innerText = `${totalAmountOfStock()} tv's are still in stock`;
     currentStock.style.color = "red";
 }
-
-createAmountOfStock();
