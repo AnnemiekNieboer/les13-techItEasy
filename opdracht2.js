@@ -44,7 +44,7 @@ console.log(totalSumOfSoldTvs())
 export const createSoldTvs = () => {
     const soldTvs = document.getElementById("sold-tvs");
     soldTvs.innerText = `${totalSumOfSoldTvs()} tv's are sold`
-    soldTvs.style.color = "green";
+    soldTvs.style.color = "#24D594";
 };
 
 // * **Opdracht 2c:** Hoeveel tv's heeft Tech It Easy ingekocht? Schrijf
@@ -83,7 +83,7 @@ console.log(totalSumOfPurchasedTvs());
 export const createPurchasedTvs = () => {
     const purchasedTVs = document.getElementById("tvs-purchased");
     purchasedTVs.innerText = `${totalSumOfPurchasedTvs()} tv's are purchased`;
-    purchasedTVs.style.color = "blue";
+    purchasedTVs.style.color = "#3095E7";
 }
 
 // * **Opdracht 2e:** Geef _in het rood_ weer hoeveel tv's er nog verkocht
