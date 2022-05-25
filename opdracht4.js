@@ -11,7 +11,8 @@ export function tvFormat (selectedTv) {
     return `${selectedTv.brand} ${selectedTv.type} - ${selectedTv.name}`;
 }
 
-console.log(tvFormat(inventory[1]))
+// console.log("Opdracht 4a:")
+// console.log(tvFormat(inventory[1]))
 
 //
 //     Opdracht 4b: Maak een herbruikbare functie die de prijs van één tv als parameter verwacht (zoals 379 of 159) teruggeeft in het format €379,- of €159,-.
@@ -20,11 +21,12 @@ console.log(tvFormat(inventory[1]))
 //Stap 2: Voeg parameter toe voor de te selecteren tv
 //Stap 3: Geef een string return met euroteken voor het bedrag en ,- op einde
 
-function tvPricesFormat(selectedTv) {
+export function tvPricesFormat(selectedTv) {
     return `€${selectedTv.price},-`;
 }
 
-console.log(tvPricesFormat(inventory[1]));
+// console.log("Opdracht 4b:")
+// console.log(tvPricesFormat(inventory[1]));
 
 //
 // Opdracht 4c: Maak een herbruikbare functie die een string genereert voor
@@ -43,7 +45,7 @@ console.log(tvPricesFormat(inventory[1]));
 // // [schermgrootte] inches ([schermgrootte omgerekend]cm)
 //Stap 4: Geef een string return middels if statement voor 1 schermgrootte in het format 32 inch (81 cm)
 
-function screenSizesFormat(selectedTv) {
+ export function screenSizesFormat(selectedTv) {
     let onePriceFormat = `${selectedTv.availableSizes[0]} inches (${selectedTv.availableSizes[0] * 2.54} cm) `
     let fourPricesFormat = `${selectedTv.availableSizes[0]} inches (${selectedTv.availableSizes[0] * 2.54} cm) | ${selectedTv.availableSizes[1]} inches (${selectedTv.availableSizes[1] * 2.54} cm) | ${selectedTv.availableSizes[2]} inches (${selectedTv.availableSizes[2] * 2.54} cm) | ${selectedTv.availableSizes[3]} inches (${selectedTv.availableSizes[3] * 2.54} cm) `;
     if (selectedTv.availableSizes.length === 1) {
@@ -53,7 +55,8 @@ function screenSizesFormat(selectedTv) {
     }
 }
 
-console.log(screenSizesFormat(inventory[3]));
+// console.log("Opdracht 4c:")
+// console.log(screenSizesFormat(inventory[3]));
 
 
 //
