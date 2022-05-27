@@ -1,0 +1,69 @@
+/* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* --------------- 1.1 Colors ------------------- */
+
+:root {
+    --main-background-color: #F5F7FB;
+    --main-shadow-color: #d5d5d7;
+    --main-card-color: white;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+body {
+    font-family: "Montserrat", serif;
+    background-color: var(--main-background-color)
+}
+
+h1 {
+    font-weight: 400;
+    margin: 20px;
+}
+
+p {
+    margin-left: 20px;
+}
+
+.footer-text {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+/* ------------------------------- 3. Layout ----------------------------------- */
+
+
+table {
+    border: 1px solid var(--main-shadow-color);
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px var(--main-shadow-color);
+}
+
+table {
+    width: 300px;
+    padding: 10px;
+    background-color: var(--main-card-color);
+}
+th, td {
+    padding: 5px;
+    background-color: var(--main-card-color);
+}
+
+th {
+    text-align: left;
+    font-weight: 600;
+    padding: 5px 0 15px 0;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 10px 0 15px 0;
+    border-bottom: 1px solid #d5d5d7;
+    font-size: 14px;
+}
+
