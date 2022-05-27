@@ -13,7 +13,6 @@ export const tvTypes = inventory.map((inventory) => {
     return inventory.type;
 })
 
-// console.log(tvTypes);
 
 //     Opdracht 1b: Gebruik een array-methode
 //     om alle tv's te verzamelen (de hele
@@ -34,9 +33,6 @@ export const soldOut = inventory.filter((tv) => {
     }
 })
 
-
-// console.log(soldOut);
-
 // Opdracht 1c: Gebruik een array-methode om alle tv's te verzamelen
 // (de hele objecten) die over AmbiLight beschikken.
 // Log de uitkomst in de console.
@@ -52,8 +48,6 @@ export const ambiLightTv = inventory.filter((tv) => {
     }
 })
 
-// console.log(ambiLightTv);
-
 // Opdracht 1d: Schrijf een functie die alle tv's van laagste naar
 // hoogste prijs sorteert. Log de uitkomst in de console.
 
@@ -64,5 +58,3 @@ export const ambiLightTv = inventory.filter((tv) => {
 export const sortByPrice = inventory.sort((a , b)=> {
     return a.price - b.price;
 })
-
-// console.log(sortByPrice);
